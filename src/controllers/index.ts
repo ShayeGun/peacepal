@@ -16,3 +16,11 @@ export const registerUser = catchAsync(async (req: Request, res: Response, next:
         data: user
     });
 });
+
+export const getAllUsersInfo = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
+    const emails = await User.find({});
+
+    res.json({
+        data: emails
+    });
+});
