@@ -12,7 +12,7 @@ export const registerUser = catchAsync(async (req: Request, res: Response, next:
 
     const user = await User.create({ email });
 
-    res.json({
+    res.status(201).json({
         data: user
     });
 });
