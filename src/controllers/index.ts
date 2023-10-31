@@ -13,6 +13,8 @@ export const registerUser = catchAsync(async (req: Request, res: Response, next:
     const user = await User.create({ email });
 
     res.status(201).json({
+        // because of Parsa --> unclean code -_-
+        status: 201,
         data: user
     });
 });
