@@ -9,11 +9,11 @@ env.config({ path: `${__dirname}/../.env` });
 checkEnvVar('PORT', 'MONGODB_URL', 'DB_USERNAME', 'DB_PASSWORD', 'DB_NAME');
 
 mongoose.connect(process.env.MONGODB_URL!,
-    {
-        user: process.env.DB_USERNAME,
-        pass: process.env.DB_PASSWORD,
-        dbName: process.env.DB_NAME
-    }
+    // {
+    //     user: process.env.DB_USERNAME,
+    //     pass: process.env.DB_PASSWORD,
+    //     dbName: process.env.DB_NAME
+    // }
 ).then(() => {
     console.log('MongoDB connected');
 }).catch((err) => {
